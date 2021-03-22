@@ -1,5 +1,6 @@
 # Laws of Probability ----
-# Product Rule
+ 
+# Product Rule 
 A <- rbinom(10000,1,.4)
 B <- rbinom(10000,1,.2)
 mean(A&B)
@@ -8,6 +9,52 @@ mean(A&B)
 C <- rbinom(10000,1,.6)
 D <- rbinom(10000,1,.1)
 mean(C|D)
+
+
+# Bayesian 
+#   - Flip 20, 11 came out Heads
+fair <- rbinom(50000, 20, .5)
+biased <- rbinom(50000, 20, .75)
+
+fair_11 <- sum(fair == 11)
+biased_11 <- sum(biased == 11)
+fair_11 / (fair_11 + biased_11)
+
+#   - Flip 20, 16 came out Heads
+fair <- rbinom(50000, 20, .5)
+biased <- rbinom(50000, 20, .75)
+
+fair_16 <- sum(fair == 16)
+biased_16 <- sum(biased == 16)
+fair_16 / (fair_16 + biased_16)
+
+#   - Flip 14/20 came out Heads. Fair(80%) 
+fair_flips <- rbinom(8000,20,.5)
+biased_flips <- rbinom(2000,20,.75)
+
+fair_14 <- sum(fair_flips == 14)
+biased_14 <- sum(fair_flips == 14)
+fair_14 / (fair_14 + biased_14)
+
+flips_fair <- rbinom(80000, 20, .5)
+flips_high <- rbinom(10000, 20, .75)
+flips_low <- rbinom(10000, 20, .25)
+
+fair_14 <- sum(flips_fair == 14)
+high_14 <- sum(flips_high == 14)
+low_14 <- sum(flips_low == 14)
+fair_14 / (fair_14 + low_14 + high_14)
+
+probability_fair <- dbinom(11,20,.5)
+probability_biased <- dbinom(11,20,.75)
+probability_fair / (probability_fair + probability_biased)
+
+dbinom(14, 20, .5) / (dbinom(14, 20, .5) + dbinom(14, 20, .75))
+dbinom(18, 20, .5) / (dbinom(18, 20, .5) + dbinom(18, 20, .75))
+
+probability_16_fair <- dbinom(16, 20, .5)
+probability_16_biased <- dbinom(16, 20, .75)
+(probability_16_fair * .99) / (probability_16_fair * .99 + probability_16_biased * .01)
 
 ## PROBABILITY: Distributions ----
 
