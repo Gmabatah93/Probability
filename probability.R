@@ -1,4 +1,4 @@
-# PROBABILITY: Laws ----
+## PROBABILITY: Laws ----
  
 # Product Rule 
 A <- rbinom(10000,1,.4)
