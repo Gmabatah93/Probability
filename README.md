@@ -30,3 +30,53 @@ Intersection | Union | Disjoint | Subset | Partition | Compliment |
 2. **Fundamental Counting Principle**. Used when repetitions are allowed and the number of ways to fill an open place is not affected by previous fills  _(i.e. There are 3 types of breakfasts, 4 types of lunches, and 5 types of desserts. The total number of combinations = 5 * 4 * 3 = 60)_
 3. **_Permutations: P(n,r) = n! / (n-r)!_**. Used when replacements are not allowed and order matters. _(i.e. A code has 4 digits in a particular order and the digits range from 0 to 9. How many permutations are there if one digit can only be used once = 10! / (10 - 4)! = 5,040)_
 4. **_Combinations Formula: C(n,r) = n! / [ (n - r)! r! ]_**. Used when replacements are not allowed and order does not matter. _(i.e. To win the lottery, you must select the 5 correct numbers in any order from 1 to 52. What is the number of possible combinations. 52! / (52 - 5)!5!) = 2,598,960)_
+
+## Binomial Distribution
+
+> * Sequence of **n** Bernoulli Trials (sample <= 10% of population approx independent)
+> * Each Trial Success or Failure
+> * Fixed num of Trials
+> * Probability of success on each Trial is constant
+
+ <img src="Images/Binomial.PNG" width="550">
+
+ Expected Value | Variance
+ --- | ---
+ <img src="Images/BinomialEV.PNG" width="150"> | <img src="Images/BinomialVar.PNG" width="200">
+
+ ## Geometric Distribution
+
+ > * Sequence of independent Bernoulli Trials
+ > * Each Trial Success of Failure
+ > * Same Probability on each Trial
+
+<img src="Images/Geo.PNG" width="450">
+<img src="Images/GeoFor.PNG" width="250">
+
+Expected Value | Variance
+--- | ---
+<img src="Images/GeoEV.PNG" width="150"> | <img src="Images/GeoVar.PNG" width="200">
+
+## Poisson Distribution
+
+> * Que Theory
+> * Each Event is independent
+> * Expected number of occurrences are assumed to be constant throughout the experiment
+
+ <img src="Images/Poisson.PNG" width="450">
+
+## Uniform Distribution
+
+> Probability of each outcome is the same
+
+F(x) | P(X < x) | E(x) | Std(x)
+--- | --- | --- | ---
+<img src="Images/Uniformfx.PNG" width="200"> | <img src="Images/Uniformpx.PNG" width="200"> | <img src="Images/Uniformmean.PNG" width="150"> | <img src="Images/Uniformstd.PNG" width="100">
+
+## Exponential Distribution
+
+> * Time per single event
+> * Events must occur at a constant rate
+> * independent
+
+## Sampling Distribution
