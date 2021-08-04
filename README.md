@@ -80,3 +80,14 @@ F(x) | P(X < x) | E(x) | Std(x)
 > * independent
 
 ## Sampling Distribution
+
+## Beta Distribution
+> Generalization of the Bernoulli Distribution
+
+ <img src="Images/BetaD.PNG" width="500">
+
+
+## Dirichlet Distribution
+> Generalization of the Beta Distribution.\
+> Distribution over vectors whose values are all in the interval [0,1] and the sum of values in the vector is 1
+> - _the vectors in the sample space of the Dirichlet have the same properties as probability distributions_
